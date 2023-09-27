@@ -1,0 +1,161 @@
+body {
+  background: -webkit-linear-gradient(-200deg, #35577d, #141e30);
+  margin: 0; /* Reset default margin */
+  font-family: Arial, sans-serif; /* Specify a font stack */
+}
+
+#header {
+  display: flex;
+  align-items: center; /* Vertically center align items */
+  justify-content: center;
+  background-color: #141e30;
+  color: antiquewhite;
+  padding: 20px;
+}
+
+h1 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: antiquewhite;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  color: antiquewhite;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  color: antiquewhite;
+}
+
+input {
+  margin-right: auto;
+}
+
+#title {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+img {
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  -moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  box-shadow: 5px 0px 5px 0px rgba(0, 0, 50, 0.97);
+  float: left;
+  width: 100px;
+}
+
+button {
+  background-color: #35577d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #1e324e;
+}
+
+#quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+img.bounce {
+  animation: bounce 0.5s ease infinite alternate;
+}
+
+h1.bounce {
+  animation: bounce 0.5s ease infinite alternate-reverse;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.melt-away {
+  animation: meltAway 1s ease-in-out;
+}
+
+/* Keyframes for the "melt away" animation */
+@keyframes meltAway {
+  0% {
+    opacity: 1; /* Start with full opacity */
+    height: auto; /* Start with the original height */
+  }
+  100% {
+    opacity: 0; /* End with no opacity (completely transparent) */
+    height: 0; /* End by collapsing the height to zero */
+  }
+}
+
+@keyframes fireballExplosion {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.fireball-explosion {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ff6600;
+  border-radius: 50%;
+  animation: fireballExplosion 1s ease-in-out;
+}
+
+.fireball-explosion::before,
+.fireball-explosion::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff0000;
+  border-radius: 50%;
+  animation: flame 0.3s ease-in-out infinite alternate;
+}
+
+.fireball-explosion::before {
+  top: 10px;
+  left: 5px;
+}
+
+.fireball-explosion::after {
+  top: 5px;
+  left: 20px;
+}
+
+@keyframes flame {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
