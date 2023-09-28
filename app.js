@@ -46,6 +46,12 @@ function nextQuestion() {
         ) {
           $("h1").addClass("bounce");
           $("img").addClass("bounce");
+          setTimeout(function play() {
+            var audio2 = new Audio(
+              "https://assets.mixkit.co/active_storage/sfx/600/600-preview.mp3"
+            );
+            audio2.play();
+          }, 0);
           console.log("True");
           setTimeout(function () {
             $("img").removeClass("bounce");
@@ -63,6 +69,12 @@ function nextQuestion() {
           setTimeout(function () {
             location.reload();
           }, 1700);
+          setTimeout(function play() {
+            var audio = new Audio(
+              "https://cdn.uppbeat.io/audio-files/5d95c75933a7405e0ea96ec1422064cd/aa732987e83c3a0d45defaeb7c789d75/143cf89cee724e2004cc8c837d8f82d0/STREAMING-trumpet-wa-wa-wa-fail-soundroll-1-00-02.mp3"
+            );
+            audio.play();
+          }, 100);
           // add a melt away feature or something
         }
       });
